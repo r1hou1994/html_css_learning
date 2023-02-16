@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>padding不会影响盒子大小情况</title>
+    <style>
+        h1 {
+            /* 只指定高度不指定宽度则不会改变元素的高度 */
+            /* width: 100%; */
+            height: 200px;
+            background-color: pink;
+            padding: 30px;
+        }
+
+        div {
+            width: 300px;
+            height: 100px;
+            background-color: purple;
+        }
+
+        div p {
+            /* 不指定子元素的高度和宽度的话则子元素不会将父元素的大小撑开 */
+            padding: 30px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1></h1>
+    <div>
+        <p></p>
+    </div>
+</body>
+
+</html>

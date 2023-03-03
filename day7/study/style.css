@@ -8,6 +8,14 @@
     margin: 0 auto;
 }
 
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 .header {
     height: 42px;
     background-color: pink;
@@ -16,7 +24,31 @@
 }
 
 .logo {
+    float: left; /* 同一行上第一个元素浮动的话，则所有元素都必须添加浮动 */
     width: 198px;
     height: 42px;
     background-color: purple;
+}
+
+.nav {
+    float: left;
+    margin-left: 60px;
+}
+
+.nav ul li {
+    float: left;
+}
+
+.nav ul li a {
+    display: block; /* 让导航栏一行显示，给li加浮动，因为li是块级元素，需要一行显示 */
+    height: 42px; /* 这个nav导航栏可以不给宽度，将来可以继续添加其余文字 */
+    padding: 0 10px; /* 因为导航栏里面文字不一样多，所以最好给链接a左右padding撑开盒子，而不是指定高度 */
+    line-height: 42px; /* 行高与盒子高度同宽可以使盒子中文字垂直居中 */
+    font-size: 18px;
+    color: #050505;
+}
+
+.nav ul li a:hover {
+    border-bottom: 2px solid #00a4ff;
+    color: #00a4ff;
 }
